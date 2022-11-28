@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Banner.css'
-import './BannerItem.css'
+import './Banneritem.css'
 const BannerItem = ({slide}) => {
     const {image, next, prev, id} = slide
     return (
@@ -11,11 +11,11 @@ const BannerItem = ({slide}) => {
 
 
         <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 top-1/4">
-            <h1 className='text-5xl font-bold text-white'>Razan Sarker</h1>
+            <h1 className='text-5xl font-bold text-white'>Md Sakib Uddin</h1>
         </div>
 
         <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 top-2/4">
-            <h1 className='text-5xl font-bold text-white'>Razan Sarker</h1>
+            <h1 className='text-5xl font-bold text-white'>Md Sakib Uddin</h1>
         </div>
 
         <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 right-5 bottom-0">

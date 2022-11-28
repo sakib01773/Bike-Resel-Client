@@ -5,7 +5,7 @@ import img3 from '../../../assets/Banner/img3.jpg'
 import img4 from '../../../assets/Banner/img4.jpg'
 import img5 from '../../../assets/Banner/img5.jpg'
 import img6 from '../../../assets/Banner/img6.jpg'
-import BannerItem from './BannerItem';
+import BannerItem from './Banneritem';
 
 
 

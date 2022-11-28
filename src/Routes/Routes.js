@@ -9,8 +9,8 @@ import MyProduct from "../pages/Dashboard/MyProduct/MyProduct";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
-import AdminRoutes from "./AdminRoute/AdminRoutes";
-import Privateroute from "./PrivateRoute/Privateroute";
+import AdminRoutes from "./AdminRoute/AdminRoute";
+import Privateroute from "./PrivateRoute/PrivateRoute";
 import SellerRoutes from "./SellerRoutes/SellerRoutes";
 
 export const router = createBrowserRouter([
