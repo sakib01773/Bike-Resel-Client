@@ -9,6 +9,7 @@ import MyDashboard from "../pages/Dashboard/MyDashboard/MyDashboard";
 import MyProduct from "../pages/Dashboard/MyProduct/MyProduct";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
+import NotFound from "../pages/NotFound/NotFound";
 import Signup from "../pages/Signup/Signup";
 import AdminRoutes from "./AdminRoute/AdminRoute";
 import Privateroute from "./PrivateRoute/PrivateRoute";
@@ -68,5 +69,9 @@ export const router = createBrowserRouter([
                 element: <AdminRoutes><AllUsers/></AdminRoutes>
             },
         ]
+    },
+    {
+        path: "*",
+        element:<NotFound></NotFound>
     }
 ])
