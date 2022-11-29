@@ -56,6 +56,7 @@ const Products = () => {
                       </div>
                       <div className="card-actions justify-end">
                         <div className="badge badge-outline">Fashion</div> 
+                        {/* <div className="badge badge-outline">Buy Now</div> */}
 
                         {
                             product.price && !product.paid && 
