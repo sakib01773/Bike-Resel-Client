@@ -23,22 +23,22 @@ const Dashboardlayout = () => {
                     {/* <label htmlFor="dashboard-drawer" className="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
 
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side my-10 shadow-lg rounded-lg ">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 bg-base-100 text-base-content">
 
-                    <li><Link to='/dashboard'>My Dashboard</Link></li>
+                    <li><Link to='/dashboard'><button className="btn btn-outline w-full">My Dashboard</button></Link></li>
                         
                         {
                             isAdmin && <>
-                            <li><Link to='/dashboard/allusers'>All Users</Link></li>
+                            <li><Link to='/dashboard/allusers'><button className="btn btn-outline w-full">All Users</button></Link></li>
                             </>
                         }
 
                         {
                             isSeller &&  <>
-                            <li><Link to='/dashboard/myproduct'>My Product</Link></li>
-                            <li><Link to='/dashboard/addproduct'>Add Product</Link></li>
+                            <li><Link to='/dashboard/myproduct'><button className="btn btn-outline w-full">My Product</button></Link></li>
+                            <li><Link to='/dashboard/addproduct'><button className="btn btn-outline w-full">Add Product</button></Link></li>
                             </>
                         }
                         

@@ -87,7 +87,7 @@ const Login = () => {
                     {
                         loginError && <p>{loginError}</p>
                     }
-                    <input className='btn btn-accent w-full mt-5' value='Login' type="submit" />
+                    <input className='btn  w-full mt-5' value='Login' type="submit" />
 
                 </form>
 

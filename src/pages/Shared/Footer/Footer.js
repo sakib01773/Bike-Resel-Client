@@ -6,7 +6,7 @@ const Footers = () => {
             <div className='' >
 
 
-                <footer className="footer p-32 bg-dark text-Dark">
+                <footer className="footer p-16 bg-dark text-white bg-gray-400 shadow-lg rounded-lg">
                     <div>
                         <img className='w-20' src="https://deshibiker.com/wp-content/uploads/2022/03/Speeder.jpg" alt="" />
                         <p>Bike RESELL Industries Ltd.<br />Providing reliable tech since 1998</p>
