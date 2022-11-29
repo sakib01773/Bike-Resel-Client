@@ -44,6 +44,7 @@ const AddProduct = () => {
                     productCategory: data.productCategory,
                     purchase: data.purchase,
                     oldPrice: data.oldPrice,
+                    description: data.description,
                     image: imgData.data.url
 
                 }
@@ -143,6 +144,22 @@ const AddProduct = () => {
                             {errors.number && <p role='alert' className='text-red-500'>{errors.number.message}</p>}
 
                         </div>
+
+                        {/* description */}
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Description</span>
+                            </label>
+
+                            <textarea className="textarea textarea-bordered" placeholder="Please Describe"
+                            {...register("description", { required: 'description is requred' })}
+                            ></textarea>
+
+                           
+                            {errors.description && <p role='alert' className='text-red-500'>{errors.description.message}</p>}
+
+                        </div>
+
 
 
                         {/* location  */}
