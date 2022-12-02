@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../hocks/useTitles';
 
 const MyDashboard = () => {
+    useTitle("My Dasboard")
     const {user} = useContext(AuthContext)
     return (
         <div>

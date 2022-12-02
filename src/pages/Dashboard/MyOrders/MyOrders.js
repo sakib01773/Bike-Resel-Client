@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import Spiner from '../../../components/Spiner/Spiner';
+import useTitle from '../../../hocks/useTitles';
 import ConfirmationModal from '../../Shared/ConfirmationModal/ConfirmationModal';
 
 const MyOrders = () => {
+    useTitle("My Orders")
 
     const [deletingUser, setDeletingUser] = useState(null)
     const closeModal = () =>{
@@ -112,6 +114,8 @@ const MyOrders = () => {
                                         order.price && order.paid && <span className='text-green-600'>Paid</span>
                                     }
                                 </td>
+                                
+                                
                                 <th>
                                     <button className="btn btn-ghost btn-xs"><label  
                                         onClick={() =>setDeletingUser(order)}

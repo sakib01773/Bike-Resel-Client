@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import Spiner from '../../components/Spiner/Spiner';
+import useTitle from '../../hocks/useTitles';
 import AdertisedModal from './AdvertisedModal';
 
 const Advertised = () => {
+    useTitle("Advertised")
     const [currentProduct, seetCurrentProduct] = useState(null)
     const { data: products, isLoading, refetch } = useQuery({
         queryKey: ['porducts'],

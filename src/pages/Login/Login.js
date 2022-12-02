@@ -1,10 +1,13 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hocks/useTitles';
 import useToken from '../../hocks/useToken';
 
 const Login = () => {
+    useTitle("Login")
 
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -42,6 +45,38 @@ const Login = () => {
         })
     }
 
+//  new code start
+    
+    const [createdUserEmail, setCreatedUserEmail] = useState()
+    
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleLogIn = () => {
+        googleLogIn(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                saveUser(user.displayName, user.email)
+
+            })
+            .catch(error => console.error(error))
+    }
+
+    const saveUser = (name, email, allUsers = "Buyer") => {
+        const user = { name, email, allUsers }
+        fetch('http://localhost:5000/users', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                navigate(from, { replace: true })
+                setCreatedUserEmail(email)
+            })
+    }
 
 
     return (
@@ -95,7 +130,7 @@ const Login = () => {
 
                 <div className="divider">OR</div>
 
-                <button className='btn btn-outline w-full'>Continue with google</button>
+                <button onClick={handleGoogleLogIn} className='btn btn-outline w-full'>Continue with google</button>
             </div>
 
         </div>

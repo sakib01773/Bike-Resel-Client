@@ -3,8 +3,10 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import Spiner from '../../../components/Spiner/Spiner';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../hocks/useTitles';
 
 const MyProduct = () => {
+  useTitle("My Products")
 
   const {user} = useContext(AuthContext)
   const email = user?.email
