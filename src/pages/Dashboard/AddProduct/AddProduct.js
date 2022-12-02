@@ -52,7 +52,7 @@ const AddProduct = () => {
                 }
 
                 // save product information to the db
-                fetch('http://localhost:5000/products', {
+                fetch('https://bike-resel-server.vercel.app/products', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json',

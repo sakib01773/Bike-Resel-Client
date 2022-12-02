@@ -64,7 +64,7 @@ const Login = () => {
 
     const saveUser = (name, email, allUsers = "Buyer") => {
         const user = { name, email, allUsers }
-        fetch('http://localhost:5000/users', {
+        fetch('https://bike-resel-server.vercel.app/users', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

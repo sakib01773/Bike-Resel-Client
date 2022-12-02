@@ -26,7 +26,7 @@ const AdertisedModal = ({products, seetCurrentProduct}) => {
             email
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://bike-resel-server.vercel.app/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

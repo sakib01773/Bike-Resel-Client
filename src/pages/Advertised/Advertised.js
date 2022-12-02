@@ -11,7 +11,7 @@ const Advertised = () => {
         queryKey: ['porducts'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/advertised/'
+                const res = await fetch('https://bike-resel-server.vercel.app/advertised/'
                     , {
                         headers: {
                             authorization: `bearer ${localStorage.getItem('accessToken')}`

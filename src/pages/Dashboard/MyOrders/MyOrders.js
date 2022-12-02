@@ -19,7 +19,7 @@ const MyOrders = () => {
         queryKey: ['orders'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/orders/'
+                const res = await fetch('https://bike-resel-server.vercel.app/orders/'
                     , {
                         headers: {
                             authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -37,7 +37,7 @@ const MyOrders = () => {
 
     const handleDeleteUser = (orders) =>{
         // console.log(user)
-        fetch(`http://localhost:5000/orders/${orders._id}`, {
+        fetch(`https://bike-resel-server.vercel.app/orders/${orders._id}`, {
             method: "DELETE",
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
